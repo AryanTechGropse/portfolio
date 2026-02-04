@@ -8,7 +8,6 @@ export const authMiddleware = async (request, reply) => {
             .send({ error: "Unauthorized: x-auth-token and x-user-type required" });
     }
 
-    // Optionally, you can attach headers to request object
     request.user = {
         token,
         type: userType,
